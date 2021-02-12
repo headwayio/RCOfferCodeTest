@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -29,57 +30,27 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionTitle}>RevenueCat Offer Code Test</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                Tap the <Text style={styles.highlight}>Open Offer Code Sheet</Text> to trigger the iOS method
+                
               </Text>
+              <Text style={styles.code}>Purchases.shared.presentCodeRedemptionSheet()</Text>
+              <View style={styles.button}>
+                <TouchableOpacity onPress={() => console.log('Button tapped')}>
+                  <Text style={styles.buttonLabel}>Open Offer Code Sheet</Text>
+                </TouchableOpacity>
+              </View>
             </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
           </View>
-        </ScrollView>
       </SafeAreaView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
   body: {
     backgroundColor: Colors.white,
   },
@@ -101,6 +72,28 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  code: {
+    backgroundColor: 'lightgray',
+    color: Colors.black,
+    fontStyle: 'italic',
+    fontWeight: '500',
+    paddingVertical: 25,
+    paddingHorizontal: 5,
+    textAlign: 'center',
+  },
+  button: {
+    backgroundColor: Colors.black,
+    minHeight: 65,
+    borderRadius: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 32
+  },
+  buttonLabel: {
+    color: Colors.white,
+    fontWeight: '700',
+    fontSize: 20
+  }, 
   footer: {
     color: Colors.dark,
     fontSize: 12,
