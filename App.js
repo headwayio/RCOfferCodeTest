@@ -18,6 +18,12 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Purchases from 'react-native-purchases';
 
+const presentCodeRedemptionSheet = () => {
+  console.log('about to call presentCodeRedemptionSheet');
+  Purchases.presentCodeRedemptionSheet();
+  console.log('called presentCodeRedemptionSheet');
+}
+
 const App: () => React$Node = () => {
   return (
     <>
@@ -32,7 +38,7 @@ const App: () => React$Node = () => {
               </Text>
               <Text style={styles.code}>Purchases.shared.presentCodeRedemptionSheet()</Text>
               <View style={styles.button}>
-                <TouchableOpacity onPress={() => Purchases.presentCodeRedemptionSheet()}>
+                <TouchableOpacity onPress={presentCodeRedemptionSheet}>
                   <Text style={styles.buttonLabel}>Open Offer Code Sheet</Text>
                 </TouchableOpacity>
               </View>
