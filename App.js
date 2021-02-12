@@ -18,7 +18,6 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import Purchases from 'react-native-purchases';
 
-
 const App: () => React$Node = () => {
   return (
     <>
@@ -70,8 +69,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgray',
     color: Colors.black,
     fontStyle: 'italic',
+    fontSize: 12,
     fontWeight: '500',
-    paddingVertical: 25,
+    paddingVertical: 15,
     paddingHorizontal: 5,
     textAlign: 'center',
   },
