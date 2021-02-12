@@ -9,21 +9,15 @@
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
+  StatusBar, StyleSheet,
   Text,
-  StatusBar,
-  TouchableOpacity,
+  TouchableOpacity, View
 } from 'react-native';
-
 import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
+  Colors
 } from 'react-native/Libraries/NewAppScreen';
+import Purchases from 'react-native-purchases';
+
 
 const App: () => React$Node = () => {
   return (
@@ -39,7 +33,7 @@ const App: () => React$Node = () => {
               </Text>
               <Text style={styles.code}>Purchases.shared.presentCodeRedemptionSheet()</Text>
               <View style={styles.button}>
-                <TouchableOpacity onPress={() => console.log('Button tapped')}>
+                <TouchableOpacity onPress={() => Purchases.presentCodeRedemptionSheet()}>
                   <Text style={styles.buttonLabel}>Open Offer Code Sheet</Text>
                 </TouchableOpacity>
               </View>
