@@ -5469,6 +5469,11 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
+react-native-purchases@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-purchases/-/react-native-purchases-4.0.1.tgz#26c28f1f0d1a08a0cb69339d3785d1f8bdefc624"
+  integrity sha512-ai/D+cC9wJE4XgGb0k+ryr5cJ+yVqCv0jXzLMRV/WtXQKMbLqPijpDcPtW/IKexMlTg2T0IhPP3xr3E0Gtl5tw==
+
 react-native@0.63.4:
   version "0.63.4"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.63.4.tgz#2210fdd404c94a5fa6b423c6de86f8e48810ec36"
